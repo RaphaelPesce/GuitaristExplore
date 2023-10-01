@@ -1,0 +1,1317 @@
+/*--------------------------------------------------------------  GENERAL  ----------------------------------------------------------------------*/
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    background-color: #f8f8f1;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bgDarkGrey {
+    background-color: #293133;
+}
+
+
+.bgLightGrey {
+    background-color: #c5c7c4;
+}
+
+.bgWhite {
+    background-color: #f8f8f1;
+}
+
+.bgBlue {
+    background-color: #074474;
+}
+
+.bgBrown {
+    background-color: #afa36d;
+}
+
+.textDarkGrey {
+    color: #293133;
+}
+
+.textLightGrey {
+    color: #c5c7c4;
+}
+
+.textWhite {
+    color: #f8f8f1;
+}
+
+.textDark {
+    color: #293133;
+}
+
+.textBrown {
+    color: #afa36d;
+}
+
+.button {
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.textCenter {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 3em;
+}
+
+.greenMessage {
+    color: green;
+}
+
+.redMessage {
+    color: red;
+}
+
+.message-container {
+    position: relative;
+    height: 20px;
+}
+
+.greenMessage,
+.redMessage {
+    position: absolute;
+    top: 0;
+}
+
+.wrapper {
+    max-width: 1360px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------------  HEADER  ----------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    padding-bottom: 0;
+    height: 120px;
+}
+
+#logoSite {
+    height: 100px;
+    padding-left: 2em;
+}
+
+header a {
+    text-decoration: none;
+    padding-right: 2em;
+
+}
+
+.fa-user {
+    padding-right: 0.5em;
+}
+
+/*----------------------------------------------------------------  MENU  -----------------------------------------------------------------------*/
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.desktop-menu ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-menu ul li {
+    margin: 0 3em;
+}
+
+.desktop-menu ul li a {
+    color: #f8f8f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.desktop-menu ul li a:hover {
+    color: #afa36d;
+}
+
+/*------------------------------------------------------------  MENU BURGER NONE  ---------------------------------------------------------------*/
+
+.burger-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -405px;
+    width: 400px;
+    height: 50%;
+    transition: left 0.3s ease-in;
+    border: 2px solid #afa36d;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar li a {
+    color: #f8f8f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/*-----------------------------------------------  MAIN FORMULAIRE INSCRIPTION CONNEXION  -------------------------------------------------------*/
+
+.compte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+}
+
+.compte h2 {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.compte p {
+    padding-top: 1em;
+}
+
+.compte a {
+    text-decoration: none;
+}
+
+.compte [type="text"],
+.compte [type="email"],
+.compte [type="password"] {
+    padding: 15px;
+    margin: 0 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.compte [type="submit"] {
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+}
+
+/*--------------------------------------------------------------  MAIN ACCUEIL  -----------------------------------------------------------------*/
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.intro section h1 {
+    text-align: center;
+    padding-top: 1.5em;
+    font-size: 3em;
+}
+
+.intro section p {
+    text-align: justify;
+    line-height: 1.5;
+    padding-top: 2em;
+    font-size: 1.2em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container article {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.container article h2 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.container img {
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container article p {
+    text-align: justify;
+    padding-top: 1em;
+    line-height: 1.5;
+}
+
+.container article a {
+    text-decoration: none;
+}
+
+.contSeparation {
+    padding-bottom: 2em;
+}
+
+.separation {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #c5c7c4;
+    width: 30%;
+}
+
+/*--------------------------------------------------------  MAIN LISTE GUITARISTES  ----------------------------------------------------------*/
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.imageContainer img:hover {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.imageContainer figcaption {
+    padding-top: 1.3em;
+    font-size: 0.8em;
+}
+
+/*---------------------------------------------------------  MAIN FICHE GUITARISTE  ----------------------------------------------------------*/
+
+.ficheGtr {
+    display: flex;
+    justify-content: center;
+}
+
+.ficheGtrBio {
+    text-align: justify;
+    line-height: 1.5;
+    padding-top: 2em;
+    padding: 5em;
+}
+
+.ficheGtrBio p {
+    line-height: 1.5;
+    padding-bottom: 2em;
+}
+
+.carousel-container {
+    width: 400px;
+}
+
+.carousel-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-main img {
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5em;
+}
+
+.carousel-thumbnails img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.carousel-thumbnails img.active {
+    border: 4px solid #074474;
+}
+
+.onglet {
+    background-color: #074474;
+    color: #f8f8f1;
+    font-size: 1em;
+    padding: 1.5em;
+    margin-bottom: 5em;
+    width: 460px;
+    cursor: pointer;
+    border: none;
+}
+
+.onglet.actif {
+    text-decoration: underline;
+    color: #afa36d;
+}
+
+.container-onglet {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenair-contenu {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 5em;
+}
+
+.contenuOnglet {
+    display: none;
+}
+
+.contenuOnglet.actif {
+    display: block;
+}
+
+.materiel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 10px;
+    text-align: justify;
+    line-height: 1.5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.materiel img {
+    max-width: 70%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.reglage {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.avis {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.avis img {
+    max-width: 50%;
+    height: auto;
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.avisLeft {
+    text-align: center;
+}
+
+/*--------------------------------------------------------  MAIN CLASSEMENT GUITARISTES  -----------------------------------------------------*/
+
+.itemGtr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 5em;
+    padding-left: 0;
+}
+
+.itemGtr .position,
+.itemGtr .nom-guitariste,
+.itemGtr .moyenne-notes {
+    text-align: center;
+}
+
+.position {
+    font-size: 3em;
+}
+
+.nom-guitariste {
+    font-size: 1em;
+}
+
+.moyenne-notes {
+    font-size: 1.5em;
+}
+
+.itemGtr .image-guitariste {
+    text-align: center;
+}
+
+.itemGtr .image-guitariste img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*---------------------------------------------------------------  MAIN PROFIL  -----------------------------------------------------------------*/
+
+.profilContainer1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+}
+
+.imgAvatar {
+
+    display: inline-block;
+    padding: 0.5em;
+    border: 2px solid #293133;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.imgAvatar img {
+    max-width: 100%;
+    height: auto;
+}
+
+.file-button {
+    background-color: #074474;
+    color: #f8f8f1;
+    font-size: 1em;
+    padding: 0.7em;
+    margin-top: 1em;
+    cursor: pointer;
+    border: none;
+}
+
+.profilContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.postUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.addButton {
+    background-color: #074474;
+    color: #f8f8f1;
+    font-size: 1em;
+    padding: 0.7em;
+    cursor: pointer;
+    border: none;
+
+}
+
+.upFiche {
+    display: block;
+    background-color: #074474;
+    color: #f8f8f1;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.6em;
+    cursor: pointer;
+    border: none;
+    margin: 1.5em;
+}
+
+
+.infoUser li {
+    font-size: 1.2em;
+}
+
+.infoUser a {
+    text-decoration: none;
+}
+
+
+.postUser a {
+    text-decoration: none;
+}
+
+.postUser {
+    padding-bottom: 5em;
+}
+
+#guitaristeSelect {
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+/*----------------------------------------------------  FORMULAIRE ACTION UTILISATEUR  ----------------------------------------------------------*/
+
+.actionUser {
+    padding-bottom: 5em;
+}
+
+.actionUser .textCenter {
+    text-align: center;
+}
+
+.actionUser h2 {
+    margin-bottom: 1em;
+}
+
+.actionUser label {
+    display: block;
+    font-weight: bold;
+}
+
+.actionUser select,
+.actionUser textarea,
+.actionUser input[type="text"],
+.actionUser input[type="number"],
+.actionUser input[type="file"],
+.actionUser input[type="date"] {
+    padding: 15px;
+    margin: 0 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 350px;
+    font-size: 0.7em;
+}
+
+.actionUser textarea {
+    height: 100px;
+}
+
+.actionUser button {
+    font-size: 0.7em;
+    cursor: pointer;
+    border: none;
+}
+
+/*-----------------------------------------------------------------  FOOTER  --------------------------------------------------------------------*/
+
+footer {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f8f8f1;
+    padding: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex-basis: 33.33%;
+    text-align: center;
+}
+
+.footer-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-left ul li {
+    margin-bottom: 5px;
+}
+
+.footer-left ul li a {
+    color: #f8f8f1;
+    text-decoration: none;
+}
+
+.bgBlue li a:hover {
+    text-decoration: underline;
+    color: #afa36d;
+}
+
+.fa-brands {
+    font-size: 2em;
+}
+
+/*---------------------------------------------------------  RESPONSIVE TABLETTE  ------------------------------------------------------------*/
+
+@media (max-width: 900px) {
+
+    /*------------------------------------------------------- General Tablette  --------------------------------------------------------------*/
+
+    .wrapper {
+        padding: 0 2em;
+    }
+
+    .textCenter {
+        text-align: center;
+        font-size: 1em;
+        padding-top: 3em;
+    }
+
+    /*--------------------------------------------------------- Header Tablette --------------------------------------------------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem;
+        padding-bottom: 0;
+        height: 120px;
+    }
+
+    #logoSite {
+        height: 80px;
+        padding-left: 2em;
+    }
+
+    header a {
+        text-decoration: none;
+        padding-right: 2em;
+        font-size: 1.em;
+    }
+
+    .fa-user {
+        padding-right: 0.5em;
+    }
+
+    /*------------------------------------------------------  Menu Burger Tablette --------------------------------------------------------------*/
+
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .burger-icon {
+        display: inline-block;
+        padding-left: 0.5em;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar li {
+        margin-bottom: 40px;
+    }
+
+    .sidebar li a {
+        font-size: 1.5em;
+    }
+
+    /*------------------------------------------------------  Bandeau Tablette  -----------------------------------------------------------------*/
+    .responsive-img {
+        height: 39vh;
+    }
+
+    /*----------------------------------------  Main Formulaire inscription Connexion Tablette  -------------------------------------------------*/
+
+    .compte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5em;
+        padding-bottom: 20em;
+    }
+
+    .compte h2 {
+        text-align: center;
+        padding-bottom: 1.5em;
+    }
+
+    .compte p {
+        padding-top: 1em;
+    }
+
+    .compte a {
+        text-decoration: none;
+    }
+
+    .compte [type="text"],
+    .compte [type="email"],
+    .compte [type="password"] {
+        padding: 15px;
+        margin: 0 0;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 350px;
+    }
+
+    .compte [type="submit"] {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    /*----------------------------------------------------  Main Accueil Tablette  -----------------------------------------------------------*/
+
+    .intro section h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    /*------------------------------------------------  Main Liste Guitaristes Tablette  -----------------------------------------------------*/
+
+    .imageContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .imageContainer figcaption {
+        padding-top: 1.3em;
+        font-size: 1.2em;
+    }
+
+    /*------------------------------------------------  Main Fiche Guitariste Tablette  ------------------------------------------------------*/
+
+    .ficheGtr {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-main {
+        height: 400px;
+        padding-bottom: 1.5em;
+    }
+
+    .carousel-main img {
+        height: 400px;
+    }
+
+    .carousel-thumbnails {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2em;
+    }
+
+    .ficheGtrBio {
+        text-align: justify;
+        line-height: 1.5;
+        padding-top: 0;
+        padding: 0;
+        padding-bottom: 1.5em;
+    }
+
+    .materiel {
+        grid-template-columns: 1fr;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .materiel img {
+        display: block;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .reglage {
+        text-align: justify;
+        line-height: 1.5;
+        padding-left: 4em;
+    }
+
+    /*---------------------------------------------  Main Classement Guitariste Tablette  -------------------------------------------------------*/
+
+    .itemGtr .image-guitariste img {
+        width: 160px;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .position {
+        font-size: 2.5em;
+    }
+
+    .nom-guitariste {
+        font-size: 0.7em;
+    }
+
+    .moyenne-notes {
+        font-size: 1em;
+    }
+
+    /*---------------------------------------------  Formulaire Action Utilisateur Tablette  ----------------------------------------------------*/
+
+    .actionUser button {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    .actionUser select,
+    .actionUser textarea,
+    .actionUser input[type="text"],
+    .actionUser input[type="number"],
+    .actionUser input[type="file"],
+    .actionUser input[type="date"] {
+        padding: 15px;
+        margin: 0 0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 350px;
+        font-size: 1em;
+    }
+
+
+    /*-------------------------------------------------------  Footer Tablette  --------------------------------------------------------------*/
+}
+
+
+
+/*----------------------------------------------------------  RESPONSIVE MOBILE  -------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+
+    /*--------------------------------------------------------- General Mobile  --------------------------------------------------------------*/
+
+    .wrapper {
+        padding: 0 2em;
+    }
+
+    .textCenter {
+        text-align: center;
+        font-size: 0.8em;
+        padding-top: 3em;
+    }
+
+    /*--------------------------------------------------------  Header Mobile  ------------------------------------------------------------------*/
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem;
+        padding-bottom: 0;
+        height: 100px;
+    }
+
+    #logoSite {
+        height: 60px;
+        padding-left: 1em;
+    }
+
+    header a {
+        text-decoration: none;
+        padding-right: 2em;
+        font-size: 0.7em;
+    }
+
+    .fa-user {
+        padding-right: 0.5em;
+    }
+}
+
+/*----------------------------------------------------------  Menu Burger Mobile  ---------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .burger-icon {
+        display: inline-block;
+        font-size: 40px;
+        padding-left: 0.5em;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar {
+        left: -255px;
+        width: 250px;
+    }
+
+    .sidebar li {
+        margin-bottom: 40px;
+    }
+
+    .sidebar li a {
+        font-size: 1em;
+    }
+
+    /*-------------------------------------------------------  Bandeau Mobile  ------------------------------------------------------------------*/
+
+    .responsive-img {
+        height: 51vh;
+    }
+
+    /*------------------------------------------  Main Formulaire inscription Connexion Mobile  -------------------------------------------------*/
+
+    .compte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .compte h2 {
+        text-align: center;
+        padding-bottom: 1.5em;
+    }
+
+    .compte p {
+        padding-top: 1em;
+    }
+
+    .compte a {
+        text-decoration: none;
+    }
+
+    .compte [type="text"],
+    .compte [type="email"],
+    .compte [type="password"] {
+        padding: 15px;
+        margin: 0 0;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 280px;
+    }
+
+    .compte [type="submit"] {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    /*-----------------------------------------------------  Main Accueil Mobile  ---------------------------------------------------------------*/
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2em;
+    }
+
+    .intro section h1 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container article {
+        flex-basis: 100%;
+        margin-bottom: 2em;
+    }
+
+    /*-------------------------------------------------  Main Liste Guitaristes Mobile  ------------------------------------------------------*/
+
+    .imageContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .imageContainer figcaption {
+        padding-top: 1.3em;
+        font-size: 1.5em;
+    }
+
+    /*--------------------------------------------------  Main Fiche Guitariste Mobile  ---------------------------------------------------------*/
+
+    .carousel-main {
+        height: 300px;
+    }
+
+    .carousel-main img {
+        height: 300px;
+    }
+
+    .carousel-thumbnails img {
+        height: 75px;
+    }
+
+    .onglet {
+        background-color: #074474;
+        color: #f8f8f1;
+        font-size: 1em;
+        padding: 1em;
+        margin-bottom: 5em;
+        width: 350px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .materiel img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .reglage {
+        text-align: justify;
+        line-height: 1.5;
+        padding-left: 0;
+    }
+
+    /*-----------------------------------------------  Main Classement Guitariste Mobile  -------------------------------------------------------*/
+
+    .itemGtr {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .itemGtr .image-guitariste img {
+        width: 160px;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    /*-----------------------------------------------------   Main Profil Mobile  ---------------------------------------------------------------*/
+
+    .profilContainer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatarContainer,
+    .infoUser {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .infoUser p {
+        text-align: left;
+    }
+
+    .file-button {
+        background-color: #074474;
+        color: #f8f8f1;
+        font-size: 0.7em;
+        padding: 0.7em;
+        margin-top: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    .addButton {
+        background-color: #074474;
+        color: #f8f8f1;
+        font-size: 0.7em;
+        padding: 0.6em;
+        cursor: pointer;
+        border: none;
+
+    }
+
+    .upFiche {
+        display: block;
+        background-color: #074474;
+        color: #f8f8f1;
+        font-size: 0.7em;
+        padding: 0.7em;
+        cursor: pointer;
+        border: none;
+        margin: 1.5em;
+    }
+
+    /*----------------------------------------------  Formulaire Action Utilisateur Mobile  -----------------------------------------------------*/
+
+    .actionUser select,
+    .actionUser textarea,
+    .actionUser input[type="text"],
+    .actionUser input[type="number"],
+    .actionUser input[type="file"],
+    .actionUser input[type="date"] {
+        padding: 15px;
+        margin: 0 0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 280px;
+        font-size: 1em;
+    }
+
+    /*---------------------------------------------------------  Footer Mobile  -----------------------------------------------------------------*/
+
+    footer {
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left {
+        order: 1;
+    }
+
+    .footer-center {
+        order: 3;
+    }
+
+    .footer-right {
+        order: 2;
+    }
+}
+
+/*--------------------------------------------------------  Responsive Execption  ---------------------------------------------------------------*/
+
+@media (max-width: 1300px) {
+
+    .wrapper {
+        padding: 0 2em;
+    }
+}
+
+
+@media (max-width: 370px) {
+
+    header a {
+        text-decoration: none;
+        padding-right: 2em;
+        font-size: 0.6em;
+    }
+
+    #logoSite {
+        height: 50px;
+        padding-left: 1em;
+    }
+
+    .responsive-img {
+        height: 62vh;
+    }
+
+
+    .sidebar {
+        left: -255px;
+        width: 250px;
+    }
+
+    .sidebar li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro section h1 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .intro section p {
+        text-align: justify;
+        line-height: 1.5;
+        padding-top: 2em;
+        font-size: 1em;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border: 2px solid #293133;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, filter 0.3s;
+    }
+
+    .onglet {
+        background-color: #074474;
+        color: #f8f8f1;
+        font-size: 0.7em;
+        padding: 1em;
+        margin-bottom: 5em;
+        width: 350px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .actionUser select,
+    .actionUser textarea,
+    .actionUser input[type="text"],
+    .actionUser input[type="number"],
+    .actionUser input[type="file"],
+    .actionUser input[type="date"] {
+        padding: 15px;
+        margin: 0 0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 225px;
+        font-size: 1em;
+    }
+}
