@@ -17,9 +17,6 @@ class AvisModel extends DbConnect
     public function addAvisModel(Avis $avis)
     {
         try {
-            // Obtenir la date actuelle au format "YYYY-MM-DD"
-            $date = date("Y-m-d");
-
             // Préparation de la requête SQL pour insérer une nouvelle entrée dans la table "avis". 
             $this->request = $this->connection->prepare("INSERT INTO avis (note, commentaire, date, id_guitariste, id_utilisateur) 
             VALUES (:note, :commentaire, :date, :id_guitariste, :id_utilisateur)");
@@ -27,7 +24,7 @@ class AvisModel extends DbConnect
             // Liaison des valeurs à l'identifiant de paramètre dans la requête SQL préparée
             $this->request->bindValue(":note", $avis->getNote());
             $this->request->bindValue(":commentaire", $avis->getCommentaire());
-            $this->request->bindValue(":date", $date);
+            $this->request->bindValue(":date", $avis->getDate());
             $this->request->bindValue(":id_guitariste", $avis->getId_guitariste());
             $this->request->bindValue(":id_utilisateur", $avis->getId_utilisateur());
 
