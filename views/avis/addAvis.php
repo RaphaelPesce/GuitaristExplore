@@ -41,10 +41,6 @@ $title = 'GuitaristExtreme - Formulaire Ajout Notes et Commentaires';
                     <div><label for="commentaire">Déposer un commentaire :</label><br></div>
                     <textarea id="commentaire" name="commentaire" required></textarea>
                 </div>
-                <div>
-                    <div><label for="date">Date d'ajout :</label><br></div>
-                    <input type="date" id="date" name="date" required>
-                </div>
                 <button type="submit" class="button bgBlue textWhite" name="ajouter">Ajouter</button>
             </form>
         </div>
