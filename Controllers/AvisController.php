@@ -38,6 +38,7 @@ class AvisController extends Controller
             // Remplissage de l'objet Avis avec les données du formulaire, en utilisant la fonction htmlspecialchars() pour éviter les injections de code
             $avis->setNote(isset($_POST['note']) ? htmlspecialchars($_POST['note']) : '');
             $avis->setCommentaire(isset($_POST['commentaire']) ? htmlspecialchars($_POST['commentaire']) : '');
+            $avis->setDate(date('Y-m-d'));
             $avis->setId_guitariste(isset($_POST['id_guitariste']) ? htmlspecialchars($_POST['id_guitariste']) : '');
 
             // Récupération de l'ID de l'utilisateur à partir de la session
