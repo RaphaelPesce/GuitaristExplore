@@ -463,21 +463,25 @@ header a {
 .avis {
     display: flex;
     justify-content: space-between;
-    text-align: justify;
-    line-height: 1.5;
+    margin-bottom: 5em;
 }
 
 .avis img {
-    max-width: 50%;
+    max-width: 120px;
     height: auto;
     border: 2px solid #293133;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin: 0 auto;
 }
 
 .avisLeft {
     text-align: center;
+    font-size: 0.8em;
+}
+
+.avisRight {
+    text-align: justify;
+    line-height: 1.5;
+    padding-left: 5em;
 }
 
 /*--------------------------------------------------------  MAIN CLASSEMENT GUITARISTES  -----------------------------------------------------*/
@@ -1120,6 +1124,14 @@ footer {
     .reglage {
         text-align: justify;
         line-height: 1.5;
+        padding-left: 0;
+    }
+
+    .avis {
+        display: block;
+    }
+
+    .avisRight {
         padding-left: 0;
     }
 
