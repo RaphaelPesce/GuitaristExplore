@@ -14,7 +14,7 @@ $title = 'GuitaristExtreme - Formulaire Ajout Guitariste';
 
             <h1>Ajouter un guitariste</h1>
 
-            <form action="../public/index.php?controller=guitariste&action=addGuitariste" method="POST" enctype="multipart/form-data">
+            <form action="#" method="POST" enctype="multipart/form-data">
                 <!-- Champs pour le guitariste -->
                 <div>
                     <div><label for="nom">Nom du guitariste :</label><br></div>

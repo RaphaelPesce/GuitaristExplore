@@ -6,7 +6,7 @@ $title = 'GuitaristExtreme - Formulaire Ajout Materiel';
     <div class="actionUser">
         <div class="textCenter">
             <h1>Ajouter un matériel</h1>
-            <form action="../public/index.php?controller=materiel&action=addMateriel" git pull>
+            <form action="#" method="POST" enctype="multipart/form-data">
                 <div>
                     <div><label for="nom">Choisir un guitariste :</label><br></div>
                     <select id="nom" name="nom" required><?php foreach ($idGuitaristeByUser as $guitariste) : ?>

@@ -8,7 +8,7 @@ $title = 'GuitaristExtreme - Formulaire Modification Guitariste';
 
             <h1>Modification d'un guitariste</h1>
 
-            <form action="../public/index.php?controller=guitariste&action=updateGuitariste&id=<?php echo $guitariste->id_guitariste; ?>" method="POST" enctype="multipart/form-data">
+            <form action="#" method="POST" enctype="multipart/form-data">
                 <!-- Champs pour le guitariste -->
                 <div>
                     <input type="test" id="id_guitariste" name="id_guitariste" hidden value="<?php echo $guitariste->id_guitariste; ?>">
