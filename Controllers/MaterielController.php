@@ -21,20 +21,29 @@ use App\Entities\Utilisateur;
 
 class MaterielController extends Controller
 {
+    public function getMaterielForGuitariste()
+    {
+        // Récupération de l'ID du guitariste depuis l'URL
+        $id_guitariste = isset($_GET['id']) ? htmlspecialchars($_GET['id']) : "";
+
+        // Initialisation du modèle MaterielModel et récupération des matériels associés au guitariste depuis la base de données
+        $materielModel = new MaterielModel();
+        $materiel = $materielModel->getEquipementByGuitaristeId($id_guitariste);
+
+        // Envoi immédiat de la réponse à la requête AJAX
+        echo json_encode($materiel);
+    }
+
     public function addMateriel()
     {
-        // ... votre code pour gérer l'ajout de matériel
-
         // Récupère tous les guitaristes associés à l'utilisateur
         $user = new Utilisateur();
         $user->setId_utilisateur($_SESSION['id_utilisateur']);
         $modelGuitariste = new GuitaristeModel();
         $idGuitaristeByUser = $modelGuitariste->getGuitaristesByUtilisateurId($user);
 
-        // ... affichez votre formulaire d'ajout de matériel, en passant les guitaristes associés à l'utilisateur à la vue
+        // Affichez votre formulaire d'ajout de matériel, en passant les guitaristes associés à l'utilisateur à la vue
         $this->render('materiel/addMateriel', ['idGuitaristeByUser' => $idGuitaristeByUser]);
-
-        // ... le reste de votre code pour gérer l'ajout de matériel
     }
 
     public function updateMateriel()

@@ -116,6 +116,7 @@
 
     <!-- Chargement du script JavaScript pour le fonctionnement de certaines fonctionnalités -->
     <script src="../public/scripts/script.js"></script>
+    <script src="../public/scripts/fetchAPI.js"></script>
 </body>
 
 </html>
