@@ -12,8 +12,10 @@
     <title><?= $title ?></title>
     <!-- Favicon du site -->
     <link rel="icon" href="../public/images/faveIcon.ico" type="image/x-icon">
-    <!-- Fichier CSS principal -->
-    <link rel="stylesheet" href="../public/styles/style.css">
+    <!-- Fichiers CSS -->
+    <link rel="stylesheet" href="../public/styles/desktop.css">
+    <link rel="stylesheet" href="../public/styles/tablet.css">
+    <link rel="stylesheet" href="../public/styles/mobile.css">
     <!-- Chargement des polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,8 +117,12 @@
     </div>
 
     <!-- Chargement du script JavaScript pour le fonctionnement de certaines fonctionnalités -->
-    <script src="../public/scripts/script.js"></script>
+    <script src="../public/scripts/burgerMenu.js"></script>
+    <script src="../public/scripts/carousselGuitariste.js"></script>
+    <script src="../public/scripts/copyrightDate.js"></script>
     <script src="../public/scripts/fetchAPI.js"></script>
+    <script src="../public/scripts/ogletGuitariste.js"></script>
+    <script src="../public/scripts/ProfilListe.js"></script>
 </body>
 
 </html>
