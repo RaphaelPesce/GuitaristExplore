@@ -1,0 +1,228 @@
+/*---------------------------------------------------------  RESPONSIVE TABLETTE  ------------------------------------------------------------*/
+
+@media (max-width: 900px) {
+
+    /*------------------------------------------------------- General Tablette  --------------------------------------------------------------*/
+
+    .wrapper {
+        padding: 0 2em;
+    }
+
+    .textCenter {
+        text-align: center;
+        font-size: 1em;
+        padding-top: 3em;
+    }
+
+    /*--------------------------------------------------------- Header Tablette --------------------------------------------------------------*/
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3rem;
+        padding-bottom: 0;
+        height: 120px;
+    }
+
+    #logoSite {
+        height: 80px;
+        padding-left: 2em;
+    }
+
+    header a {
+        text-decoration: none;
+        padding-right: 2em;
+        font-size: 1.em;
+    }
+
+    .fa-user {
+        padding-right: 0.5em;
+    }
+
+    /*------------------------------------------------------  Menu Burger Tablette --------------------------------------------------------------*/
+
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .burger-icon {
+        display: inline-block;
+        padding-left: 0.5em;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar li {
+        margin-bottom: 40px;
+    }
+
+    .sidebar li a {
+        font-size: 1.5em;
+    }
+
+    /*------------------------------------------------------  Bandeau Tablette  -----------------------------------------------------------------*/
+    .responsive-img {
+        height: 39vh;
+    }
+
+    /*----------------------------------------  Main Formulaire inscription Connexion Tablette  -------------------------------------------------*/
+
+    .compte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5em;
+        padding-bottom: 20em;
+    }
+
+    .compte h2 {
+        text-align: center;
+        padding-bottom: 1.5em;
+    }
+
+    .compte p {
+        padding-top: 1em;
+    }
+
+    .compte a {
+        text-decoration: none;
+    }
+
+    .compte [type="text"],
+    .compte [type="email"],
+    .compte [type="password"] {
+        padding: 15px;
+        margin: 0 0;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 350px;
+    }
+
+    .compte [type="submit"] {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    /*----------------------------------------------------  Main Accueil Tablette  -----------------------------------------------------------*/
+
+    .intro section h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    /*------------------------------------------------  Main Liste Guitaristes Tablette  -----------------------------------------------------*/
+
+    .imageContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .imageContainer figcaption {
+        padding-top: 1.3em;
+        font-size: 1.2em;
+    }
+
+    /*------------------------------------------------  Main Fiche Guitariste Tablette  ------------------------------------------------------*/
+
+    .ficheGtr {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .carousel-main {
+        height: 400px;
+        padding-bottom: 1.5em;
+    }
+
+    .carousel-main img {
+        height: 400px;
+    }
+
+    .carousel-thumbnails {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2em;
+    }
+
+    .ficheGtrBio {
+        text-align: justify;
+        line-height: 1.5;
+        padding-top: 0;
+        padding: 0;
+        padding-bottom: 1.5em;
+    }
+
+    .materiel {
+        grid-template-columns: 1fr;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .materiel img {
+        display: block;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .reglage {
+        text-align: justify;
+        line-height: 1.5;
+        padding-left: 4em;
+    }
+
+    /*---------------------------------------------  Main Classement Guitariste Tablette  -------------------------------------------------------*/
+
+    .itemGtr .image-guitariste img {
+        width: 160px;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .position {
+        font-size: 2.5em;
+    }
+
+    .nom-guitariste {
+        font-size: 0.7em;
+    }
+
+    .moyenne-notes {
+        font-size: 1em;
+    }
+
+    /*---------------------------------------------  Formulaire Action Utilisateur Tablette  ----------------------------------------------------*/
+
+    .actionUser button {
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+    }
+
+    .actionUser select,
+    .actionUser textarea,
+    .actionUser input[type="text"],
+    .actionUser input[type="number"],
+    .actionUser input[type="file"],
+    .actionUser input[type="date"] {
+        padding: 15px;
+        margin: 0 0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 350px;
+        font-size: 1em;
+    }
+
+
+    /*-------------------------------------------------------  Footer Tablette  --------------------------------------------------------------*/
+}
