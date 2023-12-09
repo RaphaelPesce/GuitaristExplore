@@ -661,6 +661,25 @@ header a {
     border: none;
 }
 
+/*-----------------------------------------------------------------  FORMULAIRE AJOUT MATERIEL  --------------------------------------------------------------------*/
+
+.radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
 /*-----------------------------------------------------------------  FOOTER  --------------------------------------------------------------------*/
 
 footer {
