@@ -121,8 +121,11 @@
     <script src="../public/scripts/carousselGuitariste.js"></script>
     <script src="../public/scripts/copyrightDate.js"></script>
     <script src="../public/scripts/fetchAPI.js"></script>
+    <script src="../public/scripts/formSynch.js"></script>
+    <script src="../public/scripts/materielId.js"></script>
     <script src="../public/scripts/ongletGuitariste.js"></script>
     <script src="../public/scripts/ProfilListe.js"></script>
+    <script src="../public/scripts/radioMateriel.js"></script>
 </body>
 
 </html>
