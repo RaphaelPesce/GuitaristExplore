@@ -18,7 +18,7 @@ class GuitaristeModel extends DbConnect
     {
         try {
             // Définition de la requête SQL pour récupérer tous les guitaristes, triés par nom en ordre croissant
-            $this->request = "SELECT * FROM guitariste  ORDER BY nom ASC ";
+            $this->request = "SELECT * FROM guitariste ORDER BY nom ASC ";
 
             // Exécution de la requête SQL sur la base de données et stockage du résultat dans la variable $result
             $result = $this->connection->query($this->request);
@@ -40,11 +40,13 @@ class GuitaristeModel extends DbConnect
         try {
             // Préparation de la requête SQL pour récupérer un guitariste et ses images associées.
             // Cette requête utilise une jointure gauche pour récupérer les informations du guitariste ainsi que les images associées.
-            $this->request = $this->connection->prepare("SELECT guitariste.id_guitariste, guitariste.nom, guitariste.bio, image.image_1, 
-             image.image_2, image.image_3
+            $this->request = $this->connection->prepare(
+                "SELECT guitariste.id_guitariste, guitariste.nom, guitariste.bio, image.image_1, 
+            image.image_2, image.image_3
             FROM guitariste
             LEFT JOIN image ON guitariste.id_guitariste = image.id_guitariste
-            WHERE guitariste.id_guitariste = :id_guitariste");
+            WHERE guitariste.id_guitariste = :id_guitariste"
+            );
 
             // Liaison de la valeur de l'ID du guitariste à l'identifiant de paramètre dans la requête SQL préparée
             $this->request->bindValue(":id_guitariste", $guitariste->getId_guitariste());
