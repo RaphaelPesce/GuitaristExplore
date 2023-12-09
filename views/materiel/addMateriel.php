@@ -16,7 +16,7 @@ $title = 'GuitaristExtreme - Formulaire Ajout Materiel';
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <!-- Liste du matériel pour le guitariste choisi : affichage AJAX -->
+                <!-- Liste du matériel pour le guitariste choisi : affichage voir->fetchAPI.js-->
                 <div id="materielList"></div>
                 <button type="submit" class="button bgBlue textWhite" name="ajouter">Ajouter</button>
             </form>

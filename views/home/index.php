@@ -11,7 +11,18 @@ $title = 'GuitaristExtreme - Accueil';
     <div class="intro">
         <section>
             <h1>Bienvenue sur GuitaristExplore</h1>
-            <p> Chers passionnés de guitare,<br> Bienvenue sur notre site participatif dédié aux guitaristes renommés et à l'univers fascinant de leur équipement musical. Nous sommes ravis de vous accueillir au sein de cette communauté dédiée à l'exploration des guitaristes légendaires et des secrets qui se cachent derrière leur son unique. Que vous soyez un amateur curieux ou un expert avide de découvertes, ce site est l'endroit idéal pour plonger dans les détails captivants des instruments utilisés par vos guitaristes préférés. De Jimi Hendrix à Jimmy Page, de Carlos Santana à Eric Clapton, nous vous proposons un voyage au cœur des guitares, des amplis et des effets qui ont façonné les plus grands moments de l'histoire de la musique. Nous espérons que ce site deviendra une ressource inestimable pour vous, vous permettant de découvrir de nouveaux guitaristes, d'explorer des équipements extraordinaires et de perfectionner vos propres compétences musicales. Ensemble, célébrons l'art de la guitare et plongeons dans les mystères de l'équipement utilisé par les légendes de la musique.Bienvenue dans notre communauté vibrante et passionnée !<br> Cordialement,<br> L'équipe de GuitaristExplorer </p>
+            <p> Chers passionnés de guitare,
+                <br> Bienvenue sur notre site participatif dédié aux guitaristes renommés et à l'univers fascinant de leur équipement musical. Nous sommes ravis de vous accueillir au
+                sein de cette communauté dédiée à l'exploration des guitaristes légendaires et des secrets qui se cachent derrière leur son unique. Que vous soyez un amateur curieux ou
+                un expert avide de découvertes, ce site est l'endroit idéal pour plonger dans les détails captivants des instruments utilisés par vos guitaristes préférés. De Jimi
+                Hendrix à Jimmy Page, de Carlos Santana à Eric Clapton, nous vous proposons un voyage au cœur des guitares, des amplis et des effets qui ont façonné les plus grands
+                moments de l'histoire de la musique. Nous espérons que ce site deviendra une ressource inestimable pour vous, vous permettant de découvrir de nouveaux guitaristes,
+                d'explorer des équipements extraordinaires et de perfectionner vos propres compétences musicales. Ensemble, célébrons l'art de la guitare et plongeons dans les
+                mystères de l'équipement utilisé par les légendes de la musique.
+                <br>Bienvenue dans notre communauté vibrante et passionnée !
+                <br> Cordialement,
+                <br> L'équipe de GuitaristExplore
+            </p>
         </section>
     </div>
 

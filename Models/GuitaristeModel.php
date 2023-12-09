@@ -150,7 +150,7 @@ class GuitaristeModel extends DbConnect
             $this->request->bindValue(":image_1", $image->getImage_1());
             $this->request->bindValue(":image_2", $image->getImage_2());
             $this->request->bindValue(":image_3", $image->getImage_3());
-            $this->request->bindValue(":id_guitariste", $guitariste->getId_guitariste());
+            $this->request->bindValue(":id_guitariste", $id_guitariste);
 
             // Exécution de la requête SQL
             $this->request->execute();
