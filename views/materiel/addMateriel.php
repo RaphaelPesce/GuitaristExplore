@@ -41,7 +41,7 @@ $title = 'GuitaristExtreme - Formulaire Ajout Materiel';
                         <label for="effetSelect">Choisir un effet :</label><br>
                         <select id="effetSelect" name="nom_materiel"></select>
                     </div>
-                    <input type="hidden" id="id_materiel" name="id_materiel">
+                    <input type="hidden" id="id_materielExisting" name="id_materiel">
                     <button type="submit" class="button bgBlue textWhite" name="ajouter">Ajouter</button>
                 </form>
             </div>
