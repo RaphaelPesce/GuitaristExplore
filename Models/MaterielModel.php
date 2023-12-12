@@ -18,7 +18,7 @@ class MaterielModel extends DbConnect
         try {
             // Préparation de la requête SQL pour récupérer l'équipement d'un guitariste spécifique.
             // Cette requête utilise une jointure interne pour récupérer les informations de l'équipement.
-            $this->request = $this->connection->prepare("SELECT materiel.nom_materiel, materiel.categorie, materiel.description, materiel.img_mtr
+            $this->request = $this->connection->prepare("SELECT materiel.id_materiel, materiel.nom_materiel, materiel.categorie, materiel.description, materiel.img_mtr
             FROM materiel
             INNER JOIN Equipement ON materiel.id_materiel = Equipement.id_materiel
             WHERE Equipement.id_guitariste = :id_guitariste
