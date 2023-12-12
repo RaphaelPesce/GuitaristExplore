@@ -34,8 +34,6 @@ $title = 'GuitaristExtreme - Fiche Guitariste';
         </div>
     </article>
 
-
-
     <div class="onglets">
         <div class="container-onglet">
             <button class="onglet actif">Equipements</button>
@@ -98,7 +96,7 @@ $title = 'GuitaristExtreme - Fiche Guitariste';
 
                                 echo '<p>Posté le : ' . $date->format('d-m-Y') . '</p>';
                             } else {
-                                // Gérer l'erreur si la date ne peut pas être convertie
+
                                 echo '<p>Date invalide</p>';
                             }
                             ?>
