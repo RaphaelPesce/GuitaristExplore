@@ -22,7 +22,7 @@ class MaterielModel extends DbConnect
             FROM materiel
             INNER JOIN Equipement ON materiel.id_materiel = Equipement.id_materiel
             WHERE Equipement.id_guitariste = :id_guitariste
-            ORDER BY FIELD (materiel.categorie, 'Guitare', 'Amplificateur', 'Effet')");
+            ORDER BY FIELD (materiel.categorie, 'Guitare', 'Amplificateur', 'Effet'), materiel.nom_materiel ASC");
 
             // Liaison de la valeur de l'ID du guitariste à l'identifiant de paramètre dans la requête SQL préparée
             $this->request->bindValue(":id_guitariste", $id_guitariste);
