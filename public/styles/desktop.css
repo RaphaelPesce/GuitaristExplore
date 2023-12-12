@@ -680,6 +680,19 @@ input[type="radio"] {
     cursor: pointer;
 }
 
+.form-group,
+#reglageMessage {
+    text-align: center;
+}
+
+
+.form-group textarea {
+    width: 25%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
 /*-----------------------------------------------------------------  FOOTER  --------------------------------------------------------------------*/
 
 footer {
