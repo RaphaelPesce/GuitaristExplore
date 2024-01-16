@@ -3,8 +3,17 @@
         <img id="logoSite" src="{{ asset('images/logoGuitaristExplore.png') }}" alt="Logo du site">
     </a>
     <div class="sign">
-        <p>
-            <a href="#" class="sign-link">CONNEXION</a> / <a href="#" class="sign-link">INSCRIPTION</a>
-        </p>
+        {% if app.user %}
+            <p>
+                <a href="#" class="sign-link">MON COMPTE</a> / 
+                <a href="{{ path('app_logout') }}"  class="sign-link">DECONNEXION</a>
+            </p>
+        {% else %}
+            <p>
+                <a href="{{ path('app_login') }}" class="sign-link">CONNEXION</a> / 
+                <a href="{{ path('app_register') }}"  class="sign-link">INSCRIPTION</a>
+            </p>
+        {% endif %}
+        
     </div>
 </header>
