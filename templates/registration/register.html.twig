@@ -3,16 +3,30 @@
 {% block title %}Inscription{% endblock %}
 
 {% block main_content %}
-    <h1>Inscription</h1>
-
-    {{ form_errors(registrationForm) }}
-
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.pseudo) }}   
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.AccepterLesConditions) }}
-
-        <button type="submit" class="#">INSCRIPTION</button>
-    {{ form_end(registrationForm) }}
+    <div class="form-container">
+    <h2>S'inscrire</h2>
+        <div class="form-errors">
+            {% for error in registrationForm.vars.errors %}
+                <span class="error-message">{{ error.message }}</span>
+            {% endfor %}
+        </div>
+    
+        {{ form_start(registrationForm) }}
+            <div class="input-group">
+                {{ form_row(registrationForm.pseudo) }} 
+            </div>  
+            <div class="input-group">
+                {{ form_row(registrationForm.email) }}
+            </div>
+            <div class="input-group">
+                {{ form_row(registrationForm.plainPassword) }}
+            </div>
+            <div class="input-group checkbox-custom">
+                {{ form_row(registrationForm.AccepterLesConditions) }}
+            </div>    
+            <div class="actions">
+                <button type="submit">INSCRIPTION</button>
+            </div>            
+        {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

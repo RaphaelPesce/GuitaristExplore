@@ -33,7 +33,7 @@ class Guitarist
     private ?\DateTimeImmutable $updated_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'guitarists')]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\OneToMany(mappedBy: 'guitarist', targetEntity: Notice::class)]
     private Collection $notices;
@@ -41,7 +41,7 @@ class Guitarist
     #[ORM\OneToMany(mappedBy: 'guitarist', targetEntity: Setting::class)]
     private Collection $settings;
 
-    #[ORM\ManyToMany(targetEntity: material::class, inversedBy: 'guitarists')]
+    #[ORM\ManyToMany(targetEntity: Material::class, inversedBy: 'guitarists')]
     private Collection $material;
 
     public function __construct()
@@ -134,12 +134,12 @@ class Guitarist
         return $this;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(?user $user): static
+    public function setUser(?User $user): static
     {
         $this->user = $user;
 
@@ -214,7 +214,7 @@ class Guitarist
         return $this->material;
     }
 
-    public function addMaterial(material $material): static
+    public function addMaterial(Material $material): static
     {
         if (!$this->material->contains($material)) {
             $this->material->add($material);
@@ -223,7 +223,7 @@ class Guitarist
         return $this;
     }
 
-    public function removeMaterial(material $material): static
+    public function removeMaterial(Material $material): static
     {
         $this->material->removeElement($material);
 

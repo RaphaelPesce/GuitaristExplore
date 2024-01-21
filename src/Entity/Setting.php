@@ -25,10 +25,10 @@ class Setting
     private ?\DateTimeImmutable $updated_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'settings')]
-    private ?guitarist $guitarist = null;
+    private ?Guitarist $guitarist = null;
 
     #[ORM\ManyToOne(inversedBy: 'settings')]
-    private ?material $material = null;
+    private ?Material $material = null;
 
     #[ORM\PrePersist]
     public function prePersist(): void
@@ -89,24 +89,24 @@ class Setting
         return $this;
     }
 
-    public function getGuitarist(): ?guitarist
+    public function getGuitarist(): ?Guitarist
     {
         return $this->guitarist;
     }
 
-    public function setGuitarist(?guitarist $guitarist): static
+    public function setGuitarist(?Guitarist $guitarist): static
     {
         $this->guitarist = $guitarist;
 
         return $this;
     }
 
-    public function getMaterial(): ?material
+    public function getMaterial(): ?Material
     {
         return $this->material;
     }
 
-    public function setMaterial(?material $material): static
+    public function setMaterial(?Material $material): static
     {
         $this->material = $material;
 

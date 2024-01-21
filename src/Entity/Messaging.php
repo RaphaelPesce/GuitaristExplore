@@ -25,7 +25,7 @@ class Messaging
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'messagings')]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\PrePersist]
     public function prePersist(): void
@@ -76,12 +76,12 @@ class Messaging
         return $this;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(?user $user): static
+    public function setUser(?User $user): static
     {
         $this->user = $user;
 

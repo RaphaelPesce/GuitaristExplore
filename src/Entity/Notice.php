@@ -25,10 +25,10 @@ class Notice
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'notices')]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\ManyToOne(inversedBy: 'notices')]
-    private ?guitarist $guitarist = null;
+    private ?Guitarist $guitarist = null;
 
     #[ORM\PrePersist]
     public function prePersist(): void
@@ -79,24 +79,24 @@ class Notice
         return $this;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(?user $user): static
+    public function setUser(?User $user): static
     {
         $this->user = $user;
 
         return $this;
     }
 
-    public function getGuitarist(): ?guitarist
+    public function getGuitarist(): ?Guitarist
     {
         return $this->guitarist;
     }
 
-    public function setGuitarist(?guitarist $guitarist): static
+    public function setGuitarist(?Guitarist $guitarist): static
     {
         $this->guitarist = $guitarist;
 

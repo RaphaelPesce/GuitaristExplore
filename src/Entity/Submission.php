@@ -27,7 +27,7 @@ class Submission
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'submissions')]
-    private ?user $user = null;
+    private ?User $user = null;
 
     #[ORM\PrePersist]
     public function prePersist(): void
@@ -90,12 +90,12 @@ class Submission
         return $this;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(?user $user): static
+    public function setUser(?User $user): static
     {
         $this->user = $user;
 

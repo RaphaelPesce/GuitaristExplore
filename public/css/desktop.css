@@ -1,3 +1,5 @@
+/*---------------------------------------------------------------------------------  GENERAL  --------------------------------------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Slab&display=swap');
 
 :root {
@@ -15,7 +17,6 @@ body {
     font-family: 'Roboto Slab', serif;
     display: flex;
     flex-direction: row;
-    min-height: 100vh; 
 }
 
 img {
@@ -72,7 +73,6 @@ nav.menu ul li:not(:last-child) a {
     flex-grow: 1;
     margin-left: var(--sidebar-width); 
     overflow-y: auto; 
-    height: 100vh; 
 }
 
 header, footer {
@@ -116,5 +116,134 @@ footer {
 }
 
 
+/*-----------------------------------------------------------------------------------  FORMULAIRE  ---------------------------------------------------------------------------------*/
+
+/* Cible les champs de formulaire remplis automatiquement */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+    background-color: white !important;
+}
+
+/* Cible Mozilla Firefox */
+input:-moz-autofill,
+input:-moz-autofill:hover, 
+input:-moz-autofill:focus, 
+input:-moz-autofill:active,
+textarea:-moz-autofill,
+textarea:-moz-autofill:hover,
+textarea:-moz-autofill:focus,
+textarea:-moz-autofill:active,
+select:-moz-autofill,
+select:-moz-autofill:hover,
+select:-moz-autofill:focus,
+select:-moz-autofill:active {
+    background-color: white !important;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 2em;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    border: 2px solid #3d4449; 
+    border-radius: 5px;
+    max-width: 400px; 
+}
+
+.form-container h2 {
+    margin-bottom: 1em; /* Espace entre le titre et les messages d'erreur */
+}
+
+.error-message {
+    display: block; /* Affiche chaque message d'erreur sur sa propre ligne */
+    color: red; /* Style pour les messages d'erreur */
+    margin-bottom: 0.5em; /* Espace en dessous de chaque message d'erreur */
+}
+
+.form-errors {
+    min-height: 50px; /* Espace réservé pour les erreurs */
+    margin-bottom: 1em; /* Espace après la zone d'erreur */
+}
+
+.checkbox-custom-label {
+    margin-right: 10px; 
+}
+
+/* Style du checkbox avant qu'il ne soit coché */
+.checkbox-custom input[type="checkbox"] {
+    appearance: none; /* Retire le style par défaut */
+    background: #fff; /* Fond blanc par défaut */
+    border: 1px solid #ccc; /* Bordure grise */
+    padding: 9px; /* Taille du checkbox */
+    position: relative; /* Pour le positionnement de l'icône de vérification */
+    cursor: pointer;
+}
+
+/* Style du checkbox lorsqu'il est coché */
+.checkbox-custom input[type="checkbox"]:checked {
+    background-color: #F56A6A; /* Fond rouge */
+    border-color: #F56A6A; /* Bordure de la même couleur */
+}
+
+/* Style de l'icône de vérification lorsqu'il est coché (optionnel) */
+.checkbox-custom input[type="checkbox"]:checked::after {
+    content: '✔'; /* Symbole de vérification */
+    color: #fff; /* Symbole blanc pour contraste */
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-size: 12px;
+}
+
+.input-group {
+    margin-bottom: 2em;
+}
+
+.input-group input,
+.input-group .form-check-input {
+    padding: 0.5em;
+    border: none;
+    border-bottom: 2px solid #3d4449;
+    
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.actions {
+    display: flex;
+    justify-content: center; 
+    padding-top: 4em;
+}
+
+.actions button {
+    padding: 0.5em;
+    border: 2px solid #F56A6A; 
+    border-radius: 5px;
+    color: #F56A6A;
+    border-radius: 5px;
+    background:#ffffff;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background: #F56A6A;
+    color: #ffffff;
+}
 
 

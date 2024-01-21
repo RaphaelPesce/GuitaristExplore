@@ -3,32 +3,29 @@
 {% block title %}Connexion{% endblock %}
 
 {% block main_content %}
-<form method="post">
-    {% if error %}
-        <div class="#">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-
-    {% if app.user %}
-        <div class="sign-link">
-            Vous êtes déjà connecté(e) avec l'e-mail : {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Me déconnecter</a>
-        </div>
-    {% endif %}
-
-    <div>
-        <h1 class="#">Se connecter</h1>
-        
-        <div>
-            <input type="email" value="{{ last_username }}" name="email" id="email" class="email" autocomplete="email" placeholder="E-mail" required autofocus>
-        </div>
-        
-        <div>
-            <input type="password" name="password" id="password" class="password" autocomplete="current-password" placeholder="Mot de passe" required>
-        </div>
-    
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-    
-        <button class="#" type="submit">CONNEXION</button>
-    </div>
-    
-</form>
+<div class="form-container">
+    <h2>Se connecter</h2> 
+        <div class="form-errors">
+        {% if error %}
+            <span class="error-message">{{ error.messageKey|trans(error.messageData, 'security') }}</span>
+        {% endif %}
+        {% if app.user %}
+            <div class="form-errors">
+                <span class="error-message">Vous êtes déjà connecté(e) avec l'e-mail {{ app.user.userIdentifier }} : <a href="{{ path('app_logout') }}" class="sign-link">Me déconnecter</a></span>
+            </div>
+        {% endif %} 
+</div>
+    <form method="post">              
+            <div class="input-group">
+                <input type="email" value="{{ last_username }}" name="email" id="email" class="email" autocomplete="email" placeholder="E-mail" required autofocus>
+            </div>            
+            <div class="input-group">
+                <input type="password" name="password" id="password" class="password" autocomplete="current-password" placeholder="Mot de passe" required>
+            </div>        
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">        
+            <div class="actions">
+                <button type="submit">CONNEXION</button>
+            </div>        
+    </form>
+</div>
 {% endblock %}
