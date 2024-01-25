@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Entity\Trait\CreatedAtTrait;
+use App\Entity\Trait\UpdatedAtTrait;
 use App\Repository\SubmissionRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -9,6 +11,9 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\HasLifecycleCallbacks]
 class Submission
 {
+    use CreatedAtTrait;
+    use UpdatedAtTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -21,21 +26,10 @@ class Submission
     private array $data = [];
 
     #[ORM\Column(length: 100)]
-    private ?string $status = null;
-
-    #[ORM\Column]
-    private ?\DateTimeImmutable $created_at = null;
+    private ?string $status = 'en attente';
 
     #[ORM\ManyToOne(inversedBy: 'submissions')]
     private ?User $user = null;
-
-    #[ORM\PrePersist]
-    public function prePersist(): void
-    {
-        if ($this->created_at === null) {
-            $this->created_at = new \DateTimeImmutable();
-        }
-    }
 
     public function getId(): ?int
     {
@@ -74,18 +68,6 @@ class Submission
     public function setStatus(string $status): static
     {
         $this->status = $status;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): static
-    {
-        $this->created_at = $created_at;
 
         return $this;
     }
