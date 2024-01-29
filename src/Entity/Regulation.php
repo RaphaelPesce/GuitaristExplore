@@ -8,7 +8,6 @@ use App\Entity\Trait\PictureTrait;
 use App\Entity\Trait\TitleTrait;
 use App\Entity\Trait\UpdatedAtTrait;
 use App\Repository\RegulationRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: RegulationRepository::class)]
