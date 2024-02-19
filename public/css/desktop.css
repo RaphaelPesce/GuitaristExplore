@@ -13,10 +13,38 @@
 }
 
 body {
-    font-family: 'Permanent Marker', cursive;
     font-family: 'Roboto Slab', serif;
+    line-height: 150%;
     display: flex;
     flex-direction: row;
+}
+
+h1, h2, h3, h4 {
+    color: #3d4449;
+}
+
+p{
+    color: #7f888f;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
 }
 
 img {
@@ -27,7 +55,7 @@ img {
 aside {
     width: var(--sidebar-width);
     background: #e5e5e5;
-    padding: 20px;
+    padding: 1.5em;
     height: 100vh;
     overflow-y: auto;
     position: fixed; 
@@ -35,36 +63,35 @@ aside {
 
 aside h3 {
     text-decoration: underline solid #F56A6A 4px; 
-    text-underline-offset: 10px; 
-    margin-bottom: 10px; 
+    text-underline-offset: 0.5em; 
+    margin-top: 2.5em; 
+    margin-bottom: 2em; 
 }
 
 section#search {
-    margin-bottom: 20px;
+ margin-bottom: 5em;
 }
 
 section#search input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 nav.menu ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; 
 }
 
 nav.menu ul li a {
     text-decoration: none;
     color: #3d4449;
     display: block;
-    padding: 10px 0;
+    padding: 1em 0em;
 }
 
 nav.menu ul li:not(:last-child) a {
-    border-bottom: 1px solid #7f888f; 
-    padding-bottom: 10px; 
+    border-bottom: 1px solid #7f888f;  
 }
 
 .content-container {
@@ -75,17 +102,17 @@ nav.menu ul li:not(:last-child) a {
     overflow-y: auto; 
 }
 
-header, footer {
-    margin-left: 100px; 
-    margin-right: 100px;
+header, main, footer {
+    margin: 0em 7em;
 }
 
 header {
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     border-bottom: 4px solid #F56A6A;
     flex-shrink: 0;
+    padding: 1.3em 0em;
+    margin-bottom: 5em;
 }
 
 header #logoSite {
@@ -103,22 +130,39 @@ header #logoSite {
     color: #3d4449;   
 }
 
+nav.menu ul li a:hover, .sign-link:hover {
+    color: #F56A6A; 
+}
+
+nav.menu ul li a.active, .sign-link.active {
+    color: #F56A6A; 
+}
+
 main {
     flex-grow: 1;
-    padding: 20px;
+}
+
+.d-flex-sb{
+    display: flex;
+    justify-content: space-between;
+}
+
+.border-shadow{
+    border: 1px solid #3D4449;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); 
 }
 
 footer {
-    padding: 20px;
-    border-top: 4px solid #F56A6A;
-    text-align: center;
     flex-shrink: 0;
+    border-top: 4px solid #F56A6A;
+    text-align: center;   
+    padding: 3em 0em;
+    margin-top: 5em;
 }
 
 
 /*-----------------------------------------------------------------------------------  FORMULAIRE  ---------------------------------------------------------------------------------*/
 
-/* Cible les champs de formulaire remplis automatiquement */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
@@ -135,7 +179,6 @@ select:-webkit-autofill:active {
     background-color: white !important;
 }
 
-/* Cible Mozilla Firefox */
 input:-moz-autofill,
 input:-moz-autofill:hover, 
 input:-moz-autofill:focus, 
@@ -158,55 +201,51 @@ select:-moz-autofill:active {
     justify-content: center;
     margin: auto;
     padding: 2em;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1); 
     border: 2px solid #3d4449; 
     border-radius: 5px;
     max-width: 400px; 
 }
 
 .form-container h2 {
-    margin-bottom: 1em; /* Espace entre le titre et les messages d'erreur */
+    margin-bottom: 1em; 
 }
 
 .error-message {
-    display: block; /* Affiche chaque message d'erreur sur sa propre ligne */
-    color: red; /* Style pour les messages d'erreur */
-    margin-bottom: 0.5em; /* Espace en dessous de chaque message d'erreur */
+    display: block; 
+    color: red; 
+    margin-bottom: 0.5em; 
 }
 
 .form-errors {
-    min-height: 50px; /* Espace réservé pour les erreurs */
-    margin-bottom: 1em; /* Espace après la zone d'erreur */
+    min-height: 50px; 
+    margin-bottom: 1em; 
 }
 
 .checkbox-custom-label {
     margin-right: 10px; 
 }
 
-/* Style du checkbox avant qu'il ne soit coché */
 .checkbox-custom input[type="checkbox"] {
-    appearance: none; /* Retire le style par défaut */
-    background: #fff; /* Fond blanc par défaut */
-    border: 1px solid #ccc; /* Bordure grise */
-    padding: 9px; /* Taille du checkbox */
-    position: relative; /* Pour le positionnement de l'icône de vérification */
+    appearance: none; 
+    background: #fff; 
+    border: 1px solid #ccc; 
+    padding: 9px; 
+    position: relative; 
     cursor: pointer;
 }
 
-/* Style du checkbox lorsqu'il est coché */
 .checkbox-custom input[type="checkbox"]:checked {
-    background-color: #F56A6A; /* Fond rouge */
-    border-color: #F56A6A; /* Bordure de la même couleur */
+    background-color: #F56A6A;
+    border-color: #F56A6A; 
 }
 
-/* Style de l'icône de vérification lorsqu'il est coché (optionnel) */
 .checkbox-custom input[type="checkbox"]:checked::after {
-    content: '✔'; /* Symbole de vérification */
-    color: #fff; /* Symbole blanc pour contraste */
+    content: '✔'; 
+    color: #fff; 
     position: absolute;
     top: 0;
     left: 4px;
-    font-size: 12px;
 }
 
 .input-group {
@@ -236,7 +275,6 @@ select:-moz-autofill:active {
     border: 2px solid #F56A6A; 
     border-radius: 5px;
     color: #F56A6A;
-    border-radius: 5px;
     background:#ffffff;
     cursor: pointer;
 }
@@ -247,3 +285,68 @@ select:-moz-autofill:active {
 }
 
 
+/*----------------------------------------------------------------------------------  MAIN  ----------------------------------------------------------------------------------------*/
+
+.edito {
+    border-bottom: 2px solid  #7f888f;
+    padding-bottom: 5em;
+    margin-bottom: 2.5em;
+}
+
+.text-edito h1 {
+    font-size: 50px;
+    padding-bottom: 1em;
+}
+
+.text-edito {
+    padding-right: 1.5em;
+    padding-top: 1em;
+}
+
+.image-edito {
+    padding-left: 1.5em;
+}
+
+.first-image {
+    max-width: 600px;
+    height: auto;
+}
+
+.other-image {
+    max-width: 450px;
+    height: auto;
+}  
+
+.text-content h2{
+    padding-bottom: 1em;
+}
+
+.odd {
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+
+.even{
+    flex-direction: row-reverse;
+    padding-top: 2.5em;
+}
+
+.odd .text-content, .even .text-content {
+    padding: 2em 1.5em;
+}
+
+.odd .image-content,  .even .image-content {
+    padding: 0em 1.5em;
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.list-image{
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;   
+}
