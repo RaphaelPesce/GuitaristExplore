@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des articles{% endblock %}
+
+{% block main_content %}
+
+<h1>Liste des articles</h1>
+
+<div class="list-grid">
+{% for article in article %}
+<article>    
+        <div>
+            <img class ="border-shadow list-image" src="{{ asset(article.picture) }}" alt="images des articles">
+        </div>
+        <div>
+            <h2>{{ article.title | nl2br}}</h1>
+        </div>
+        <div>
+            <p>{{ article.paragraph | nl2br|slice(0, 100)}}{% if article.paragraph|length > 100 %}...{% endif %}</p>
+        </div>  
+</article>
+{% endfor %}
+</div>
+
+{% endblock %}
