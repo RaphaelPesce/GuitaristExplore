@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Classement des guitaristes{% endblock %}
+
+{% block main_content %}
+<h1>Le classement</h1>
+
+    <div class="list-grid">
+        {% for item in guitarist %}
+        <section>
+            <div>
+                <p>{{ loop.index }} </p>
+            </div>
+            <div>
+                <img class ="border-shadow list-image" src="{{ asset(item.guitarist.picture) }}" alt="images des guitaristes">
+            </div>
+            <div>
+                <h2>{{ item.guitarist.name }} </h2>
+            </div>     
+            <div>
+                <p>{{ item.averageNote|number_format(1, '.', ',') }} / 10</p>
+            </div>    
+        </section>
+        {% endfor %}
+    </div>
+
+{% endblock %}

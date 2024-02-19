@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des guitaristes{% endblock %}
+
+{% block main_content %}
+
+<h1>Liste des guitaristes</h1>
+
+<div class="list-grid">
+{% for guitarist in guitarist %}
+<article>    
+        <div>
+            <img class ="border-shadow list-image" src="{{ asset(guitarist.picture) }}" alt="images des guitaristes">
+        </div>
+        <div>
+            <h2>{{ guitarist.name | nl2br}}</h2>
+        </div>
+        <div>
+            <p>{{ guitarist.biography | nl2br|slice(0, 100)}}{% if guitarist.biography|length > 100 %}...{% endif %}</p>
+        </div>    
+</article>
+{% endfor %}
+</div>
+
+{% endblock %}
