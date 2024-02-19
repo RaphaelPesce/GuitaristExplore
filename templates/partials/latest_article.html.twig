@@ -1,0 +1,11 @@
+
+    {% if lastArticle %}
+        <div>
+            <img class ="border-shadow list-image" src="{{ asset(lastArticle.picture) }}" alt="images de l'article">
+        </div>
+        <div>
+            <h4>{{ lastArticle.title }}</h4>
+        </div>
+    {% else %}
+        <p>Aucun article récent trouvé.</p>
+    {% endif %}

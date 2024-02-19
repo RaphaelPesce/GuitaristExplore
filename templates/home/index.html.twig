@@ -2,6 +2,40 @@
 
 {% block title %}Accueil{% endblock %}
 
- {% block main_content %}
+{% block main_content %}
+
+{% for accueil in accueil %}
+
+    {% if loop.first %}    
+        <article class="d-flex-sb edito">
+            <div class="text-edito">
+                <div>
+                    <h1>{{ accueil.title | nl2br}}</h1>
+                </div>
+                <div>
+                    <p>{{ accueil.paragraph | nl2br}}</p>
+                </div>
+            </div>
+            <div class="image-edito">
+                <img class ="border-shadow first-image" src="{{ asset(accueil.picture) }}" alt="image édito accueil">
+            </div>
+        </article>
+    {% else %}
+        <article class="d-flex-sb {{ loop.index is odd ? 'odd' : 'even' }}">
+            <div class="text-content">
+                <div>
+                    <h2>{{ accueil.title | nl2br}}</h2>
+                </div>
+                <div>
+                    <p>{{ accueil.paragraph | nl2br}}</p>
+                </div>
+            </div>
+            <div class="image-content">
+                <img class ="border-shadow other-image" src="{{ asset(accueil.picture) }}" alt="images accueil">
+            </div>
+        </article>
+    {% endif %}
+
+{% endfor %}
  
- {% endblock %}
+{% endblock %}
